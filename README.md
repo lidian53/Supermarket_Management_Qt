@@ -1,0 +1,1 @@
+# Supermarket_Management_Based-on-Qt
