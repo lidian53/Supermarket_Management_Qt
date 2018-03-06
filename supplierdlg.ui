@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SupplierDlg</class>
+ <widget class="QDialog" name="SupplierDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>604</width>
+    <height>393</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+    color: white;
+    font: bold 10pt;
+    border-image: url(:/images/button.png) 16;
+    border-width: 16px;
+    padding: -16px 0px;
+    min-height: 32px;
+    min-width: 60px;
+}
+
+QPushButton:hover{
+	border-image:url(:/images/button_h.png) 16;
+}
+QPushButton:pressed{
+	border-image:url(:/images/button_p.png) 16;
+}
+QLabel {
+	color:gray;
+	
+}
+QToolButton {
+	border:0;
+}
+QToolButton#closeBtn{
+	background-image: url(:/images/close.png);
+}
+
+QToolButton#closeBtn:hover {
+	background-image: url(:/images/close_h.png);
+}
+
+QToolButton#closeBtn:pressed {	
+	background-image: url(:/images/close_p.png);
+}
+
+QTableView {
+    color: rgb(127, 0, 63);
+    background-color: rgb(255, 255, 241);
+    selection-color: white;
+    selection-background-color: rgb(191, 31, 127);
+    border: 2px groove gray;
+    border-radius: 5px;
+    padding: 2px 4px;
+}
+</string>
+  </property>
+  <widget class="QPushButton" name="delBtn">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>330</y>
+     <width>92</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>删除(&amp;D)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addBtn">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>330</y>
+     <width>92</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>添加(A)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="quitBtn">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>330</y>
+     <width>92</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>退出(&amp;Q)</string>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>551</width>
+     <height>261</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>585</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="MyImages.qrc">:/images/supplierHead.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="closeBtn">
+   <property name="geometry">
+    <rect>
+     <x>562</x>
+     <y>10</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>tableView</tabstop>
+  <tabstop>delBtn</tabstop>
+  <tabstop>addBtn</tabstop>
+  <tabstop>quitBtn</tabstop>
+  <tabstop>closeBtn</tabstop>
+ </tabstops>
+ <resources>
+  <include location="MyImages.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>closeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>SupplierDlg</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>46</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>quitBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>SupplierDlg</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>531</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>544</x>
+     <y>377</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

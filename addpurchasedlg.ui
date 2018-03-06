@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddPurchaseDlg</class>
+ <widget class="QDialog" name="AddPurchaseDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>585</width>
+    <height>524</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	border-radius:3px;
+	border:1px groove gray;
+}
+
+QToolButton {
+	border:0;
+}
+QToolButton#closeBtn{
+	background-image: url(:/images/close.png);
+}
+
+QToolButton#closeBtn:hover {
+	background-image: url(:/images/close_h.png);
+}
+
+QToolButton#closeBtn:pressed {	
+	background-image: url(:/images/close_p.png);
+}
+
+
+QLineEdit,QComboBox,QTextEdit {
+	color:rgb(127,0,63);
+	border:2px groove gray;
+	border-radius:6px;
+	selection-color: white;
+    selection-background-color: rgb(191, 31, 127);
+}
+
+QPushButton {
+    color: white;
+    font: bold 10pt;
+    border-image: url(:/images/button.png) 16;
+    border-width: 16px;
+    padding: -16px 0px;
+    min-height: 32px;
+    min-width: 60px;
+}
+
+QPushButton:hover{
+	border-image:url(:/images/button_h.png) 16;
+}
+QPushButton:pressed{
+	border-image:url(:/images/button_p.png) 16;
+}
+QLabel {
+	color:gray;
+	
+}
+</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>进货单号：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>60</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>进货日期：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>60</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>供应商：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>70</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="purchaseIdLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>60</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="supplierComboBox">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>60</y>
+     <width>131</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateEdit">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>60</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>490</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>总价：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="totalPriceLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>490</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0.0</string>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="okBtn">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>430</y>
+     <width>92</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确定</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelBtn">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>470</y>
+     <width>92</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delBtn">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>370</y>
+     <width>92</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>330</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>商品编号：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="goodsIdLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>330</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>330</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>数量：</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBox">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>330</y>
+     <width>42</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="closeBtn">
+   <property name="geometry">
+    <rect>
+     <x>543</x>
+     <y>10</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>565</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="MyImages.qrc">:/images/purchaseHeadpng.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addBtn">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>330</y>
+     <width>92</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>添加</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>541</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::SingleSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectRows</enum>
+   </property>
+   <attribute name="horizontalHeaderCascadingSectionResizes">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>100</number>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>商品编号</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>商品名</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>进货数量</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>进价</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>380</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>备注：</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>380</y>
+     <width>321</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="acceptRichText">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="handlerLabel">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>490</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>操作员：admin</string>
+   </property>
+  </widget>
+  <zorder>label_9</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>purchaseIdLineEdit</zorder>
+  <zorder>supplierComboBox</zorder>
+  <zorder>dateEdit</zorder>
+  <zorder>label_6</zorder>
+  <zorder>totalPriceLineEdit</zorder>
+  <zorder>okBtn</zorder>
+  <zorder>cancelBtn</zorder>
+  <zorder>delBtn</zorder>
+  <zorder>label_7</zorder>
+  <zorder>goodsIdLineEdit</zorder>
+  <zorder>label_8</zorder>
+  <zorder>spinBox</zorder>
+  <zorder>closeBtn</zorder>
+  <zorder>addBtn</zorder>
+  <zorder>tableWidget</zorder>
+  <zorder>label_5</zorder>
+  <zorder>textEdit</zorder>
+  <zorder>handlerLabel</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>goodsIdLineEdit</tabstop>
+  <tabstop>spinBox</tabstop>
+  <tabstop>addBtn</tabstop>
+  <tabstop>delBtn</tabstop>
+  <tabstop>okBtn</tabstop>
+  <tabstop>cancelBtn</tabstop>
+  <tabstop>purchaseIdLineEdit</tabstop>
+  <tabstop>supplierComboBox</tabstop>
+  <tabstop>dateEdit</tabstop>
+  <tabstop>tableWidget</tabstop>
+  <tabstop>totalPriceLineEdit</tabstop>
+  <tabstop>closeBtn</tabstop>
+ </tabstops>
+ <resources>
+  <include location="MyImages.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>closeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>AddPurchaseDlg</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>556</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>584</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>AddPurchaseDlg</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>537</x>
+     <y>394</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>576</x>
+     <y>387</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

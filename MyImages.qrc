@@ -1,0 +1,38 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/close.png</file>
+        <file>images/close_h.png</file>
+        <file>images/close_p.png</file>
+        <file>images/button.png</file>
+        <file>images/button_h.png</file>
+        <file>images/button_p.png</file>
+        <file>images/tlHeaderImg.png</file>
+        <file>images/min.png</file>
+        <file>images/min_h.png</file>
+        <file>images/min_p.png</file>
+        <file>images/toolBoxImg.png</file>
+        <file>images/bottom.png</file>
+        <file>images/collectHeader.png</file>
+        <file>images/choiceDlgHeader.png</file>
+        <file>images/purchaseHeadpng.png</file>
+        <file>images/background.png</file>
+        <file>images/supplierHead.png</file>
+        <file>images/addSupplierHead.png</file>
+        <file>images/mainBottom.png</file>
+        <file>images/mainHeader.png</file>
+        <file>images/expand_normal.png</file>
+        <file>images/expand_selected.png</file>
+        <file>images/unexpand_normal.png</file>
+        <file>images/unexpand_selected.png</file>
+        <file>images/tableBack .jpg</file>
+        <file>images/IndexPage.png</file>
+        <file>images/addUserHead.png</file>
+        <file>images/modifyUserHead.png</file>
+        <file>images/addGoodsTypeHead.png</file>
+        <file>images/headimg.png</file>
+    </qresource>
+    <qresource prefix="/config">
+        <file>config/configForAdmin.xml</file>
+        <file>config/configForGeneral.xml</file>
+    </qresource>
+</RCC>

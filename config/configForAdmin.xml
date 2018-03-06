@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<layout>
+		<Node label="收银台">
+			<Node label="收银台"></Node>
+		</Node>
+		<Node label="出售管理" collapse="0">
+			<Node label="历史账单" ></Node>
+		</Node>
+		<Node label="商品管理" collapse="0">
+			<Node label="商品信息"></Node>
+			<Node label="商品类别"></Node>
+		</Node>
+		<Node label="进货管理" collapse="0">
+			<Node label="进货处理"></Node>
+			<Node label="进货明细"></Node>
+			<Node label="供应商管理" ></Node>
+		</Node>
+		<Node label="系统设置">
+			<Node label="用户管理"></Node>
+		</Node>
+	</layout>
+</root>
